@@ -1,0 +1,43 @@
+version: '3.8'
+services:
+  service_1:
+    image: frontpage:v1
+    build: ./service1
+    container_name: service1
+    networks:
+      - example-net
+  service_2:
+    image: random_brands:v1
+    build: ./service2
+    container_name: service2
+    networks:
+      - example-net
+  service_3:
+    image: random_numbers:v1
+    build: ./service3
+    container_name: service3
+    networks:
+      - example-net
+  service_4:
+    image: alltogether:v1
+    build: ./service4
+    container_name: service4
+    networks:
+      - example-net
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    networks:
+      - example-net
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    depends_on:
+      - service1
+networks:
+  example-net:

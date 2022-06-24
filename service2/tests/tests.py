@@ -1,15 +1,15 @@
 from flask import Flask
 from flask_testing import TestCase
-from app import app,weapons
+from application.routes import app, Manufacturer
 
 class TestBase(TestCase):
     def create_app(self)
     return app 
 
-class TestWeapons(TestBase):
-    def test_weapon_choice(self):
+class TestManufacturer(TestBase):
+    def test_Manufacturer(self):
         for i in range(15):
-            response = self.client.get(url_for('weapon_choice'))
+            response = self.client.get(url_for('Manufacturer_choice'))
 
             self.assert200(response)
-            self.assertIn(response.data(), weapons)
+            self.assertIn(response.data(), Manufacturer)

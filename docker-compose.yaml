@@ -34,8 +34,8 @@ services:
         source: ./nginx.conf
         target: /etc/nginx/nginx.conf
     ports:
-      - target: 5000
-        published: 5000
+      - target: 80
+        published: 80
         protocol: tcp
     depends_on:
       - service1

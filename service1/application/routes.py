@@ -5,4 +5,6 @@ import requests
 @app.route('/')
 def index():
     brands = requests.get('http://service2:5000/brand').text
+    brands = requests.get('http://service2:5000/brand').text
+    brands = requests.post('http://service2:5000/brand').text
     return render_template('home.html', brands = brands)

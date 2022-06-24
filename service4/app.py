@@ -3,29 +3,30 @@ import random as rd
 
 app = Flask(__name__)
 
-magics = {
-    0: 'Fire'
-    1: 'Grass'
-    2: 'Water'
-    3: 'Lightning'
-    4: 'Ice'
-    5: 'Psychic'
-    6: 'Rock'
+damagetypes = {
+    0: 'Normal'
+    1: 'Fire'
+    2: 'Electric'
+    3: 'Ice'
+    4: 'Corrosive'
+    5: 'Sluge'
+    6: 'Explosive'
 }
-magic = rd.choice(list(magics.values()))
 
-if weapons == 'Sword':
-    var1 = 'Sword'
-elif weapons == 'Axe':
-    var1 = 'Axe'
-elif weapons == 'Bow':
-    var1 = 'Bow'
-elif weapons == 'Staff':
-    var1 = 'Staff'
-elif weapons == 'Trident':
-    var1 = 'Trident'
-elif weapons == 'Hammer':
-    var1 = 'Hammer'
+damagetypes = rd.choice(list(damagetypes.values()))
+
+if Manufacturer == 'Atlas':
+    var1 = 'Atlas'
+elif Manufacturer == 'Hyperion':
+    var1 = 'Hyperion'
+elif Manufacturer == 'Jakobs':
+    var1 = 'Jakobs'
+elif Manufacturer == 'Maliwan':
+    var1 = 'Maliwan'
+elif Manufacturer == 'Anshin':
+    var1 = 'Anshin'
+elif Manufacturer == 'Vladof':
+    var1 = 'Vladof'
 
 
 if rarity <= 30:

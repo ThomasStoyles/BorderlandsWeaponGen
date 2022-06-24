@@ -3,11 +3,11 @@ import random as rd
 
 app = Flask(__name__)
 
-weapons = ['Sword','Bow','Axe','Staff','Trident', 'Hammer']
+Manufacturer = ['Atlas','Hyperion','Jakobs','Maliwan','Anshin', 'Vladof']
 
-@app.route('/choose/weapon')
-def choose_weapon():
-    return rd.choice(weapons)
+@app.route('/choose/brand')
+def choose_brand():
+    return rd.choice(brand)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

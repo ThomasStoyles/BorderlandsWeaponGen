@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 Manufacturer = ['Atlas','Hyperion','Jakobs','Maliwan','Anshin', 'Vladof']
 
-@app.route('/choose/brand')
-def choose_brand():
+@app.route('/brand')
+def brand():
     return rd.choice(brand)
 
 if __name__ == '__main__':

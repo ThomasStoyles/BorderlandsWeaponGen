@@ -46,7 +46,7 @@ final_weapon = {
     'Weapon Type': var1,
     'Weapon rarity': rareness,
     'Magic on weapon': magic
-
+    
 }
 
 

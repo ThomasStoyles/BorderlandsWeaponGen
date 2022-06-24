@@ -4,7 +4,7 @@ import requests
 
 @app.route('/')
 def index():
-    brands = requests.get('http://service2:5000/brand').text
-    brands = requests.get('http://service2:5000/brand').text
-    brands = requests.post('http://service2:5000/brand').text
-    return render_template('home.html', brands = brands)
+    Manufacturers = requests.get('http://service2:5000/Manufacturer').text
+    raritys = requests.get('http://service3:5000/rarity').text
+    finals = requests.post('http://service4:5000/final',json={'Manufacturer':Manufacturers,'rarity':raritys}).text
+    return render_template('home.html', Manufacturers = Manufacturers, raritys=raritys, finals=finals)

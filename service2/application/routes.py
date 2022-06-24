@@ -1,8 +1,8 @@
 from application import app
 import random as rd
 
-Manufacturer = ['Atlas','Hyperion','Jakobs','Maliwan','Anshin', 'Vladof']
+Manufacturers = ['Atlas','Hyperion','Jakobs','Maliwan','Anshin', 'Vladof']
 
-@app.route('/brand', methods=['GET'])
-def brand():
-    return rd.choice(brand)
+@app.route('/Manufacturer', methods=['GET'])
+def Manufacturer():
+    return rd.choice(Manufacturers)

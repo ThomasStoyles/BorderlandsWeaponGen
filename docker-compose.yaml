@@ -7,7 +7,7 @@ services:
     networks:
       - example-net
   service_2:
-    image: random_brands:v1
+    image: random_manufacturer:v1
     build: ./service2
     container_name: service2
     networks:
@@ -38,6 +38,6 @@ services:
         published: 80
         protocol: tcp
     depends_on:
-      - service1
+      - service_1
 networks:
   example-net:

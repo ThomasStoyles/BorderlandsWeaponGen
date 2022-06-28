@@ -1,7 +1,7 @@
 from flask import url_for
 from flask_testing import TestCase
-from service2.app import Manufacturers
-from service4.app import damagetypes
+from service2.application.routes import Manufacturers
+from service4.application.routes import damagetypes
 
 
 class TestBase(TestCase):

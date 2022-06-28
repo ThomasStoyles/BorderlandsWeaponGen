@@ -41,21 +41,23 @@ Once all these requirements have been met the project will be complete.
 # Architecture
 The architecture for this project will be as followed...
 
-Service 1
+Service 1 - This service will be the frontend of the application. This will be what the user sees and will be very basic.
 
-Service 2 
+Service 2 - This will be the first randomized value. For my project this will be types of manufacturers that can be drawn at random. 
 
-Service 3 
+Service 3 - This will be the second randomized value. For my project this will be a number between 0-105 which will then correlate to the rarity of the weapon which will be defined in service 4.
 
-Service 4
+Service 4 - This service will be where everything comes together and will be sent back to service 1. In here we will have the numbers from service 3 be defined into groups so this number represents this rarity. In here we will also have a list of damage types which can be put on each weapon. 
 
 # Planning 
 
 ### Kanban Board
-For the project we had to create a Kanban board, for this I used trello. I used this board to track my progress throughout the application and was able to track what still needs to happen and what has been completed. Within each heading on my trello board was a To-Do list with items that I had to complete before I would have completed the project. Below are images of the trello board to help you see this process.
+For the project we had to create a Kanban board, for this I used trello. I used this board to track my progress throughout the application and was able to track what still needs to happen and what has been completed. Below are images of the trello board to help you see this process.
+Here I am half way through the project
 ![alt text](https://github.com/ThomasStoyles/QAProject/blob/main/Photos%2C%20Assessments%20and%20Diagrams/Trello.jpg)
 
-As you can see in the trello board this is about half way through createing my project. The trello board has number on it these numbers I created depending on how hard I felt certain tasks will be. I also have had some issues with my project which I will go into more detail about further in this report.
+Here I am close to finishing the project.
+![alt text](https://github.com/ThomasStoyles/QAProject/blob/main/Photos%2C%20Assessments%20and%20Diagrams/Trello.jpg)
 
 ### Risk assessment
 

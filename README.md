@@ -61,6 +61,9 @@ Here I am close to finishing the project.
 
 ### Risk assessment
 
+
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Risk.jpg)
+
 # Services
 
 # Pipeline

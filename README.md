@@ -61,11 +61,11 @@ Here I am close to finishing the project.
 
 ### Risk assessment
 
-# Designs 
+# Services
+
+# Pipeline
 
 # Testing
-
-# CI-DI Pipeline
 
 # Known app issues
 
@@ -75,10 +75,8 @@ Here I am close to finishing the project.
 
 # Conclusion
 
-# Versions 
-
 # Contributors
 Thomas Stoyles
 
 # Acknowledgements 
-I would like to thank Leon, Adam and Earl for all there support when delivering this project.
+I would like to thank Leon and Adam for all there support when delivering this project.

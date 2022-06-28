@@ -54,7 +54,7 @@ Service 4 - This service will be where everything comes together and will be sen
 ### Kanban Board
 For the project we had to create a Kanban board, for this I used trello. I used this board to track my progress throughout the application and was able to track what still needs to happen and what has been completed. Below are images of the trello board to help you see this process.
 Here I am half way through the project
-![alt text](https://github.com/ThomasStoyles/QAProject/blob/main/Photos%2C%20Assessments%20and%20Diagrams/Trello.jpg)
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Trello1.jpg)
 
 Here I am close to finishing the project.
 ![alt text](https://github.com/ThomasStoyles/QAProject/blob/main/Photos%2C%20Assessments%20and%20Diagrams/Trello.jpg)

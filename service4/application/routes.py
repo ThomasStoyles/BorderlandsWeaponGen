@@ -29,5 +29,5 @@ def final():
     return {
         'Weapon Type': Manufacturer,
         'Weapon rarity': rareness,
-        'damagetype on weapon': damagetype
+        'damage type on weapon': damagetype
     }

@@ -9,7 +9,6 @@ class TestBase(TestCase):
 class TestManufacturer(TestBase):
     def test_Manufacturer(self):
         for i in range(15):
-            response = self.client.get(url_for('Manufacturer_choice'))
-
+            response = self.client.get(url_for('Manufacturer'))
             self.assert200(response)
             self.assertIn(response.data(), Manufacturer)

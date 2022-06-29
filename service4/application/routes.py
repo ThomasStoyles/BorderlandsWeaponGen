@@ -25,9 +25,7 @@ def final():
         rareness = "Unknown"
 
     damagetype = rd.choice(damagetypes)
+
+    finishedweapon = ('Weapon Type is ' + Manufacturer + '. Weapon rarity is ' + rareness + '. Damage type is ' + damagetype)
     
-    return {
-        'Weapon Type': Manufacturer,
-        'Weapon rarity': rareness,
-        'damage type on weapon': damagetype
-    }
+    return str(finishedweapon)

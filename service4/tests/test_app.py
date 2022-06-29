@@ -1,7 +1,8 @@
-from flask import url_for
+from flask import Flask, url_for
 from flask_testing import TestCase
-from service2.application.routes import Manufacturers
-from service4.application.routes import damagetypes
+import application.routes
+from application import app 
+from unittest.mock import patch
 
 
 class TestBase(TestCase):

@@ -19,12 +19,27 @@ class Testindex(TestBase):
 class TestGun1(TestBase):
     def test_gun1(self):
         with requests_mock.Mocker() as m:
-            m.get('http://service_2:5000/Manufacturer', text='Jakobs')
-            m.get('http://service_3:5000/rarity', text='Uncommon')
-            m.post('http://service_4:5000/final', text='65')
+            m.get('http://service2:5000/Manufacturer', text='Jakobs')
+            m.get('http://service3:5000/rarity', text='Uncommon')
+            m.post('http://service4:5000/final', text='65')
             
             response =self.client.get(url_for('index'))
-            self.assert500(response)
+            self.assert200(response)
             self.assertIn(b'Jakobs', response.data)
             self.assertIn(b'Uncommon', response.data)
             self.assertIn(b'65', response.data)
+
+
+#Test gun 2
+class TestGun2(TestBase):
+    def test_gun2(self):
+        with requests_mock.Mocker() as m:
+            m.get('http://service2:5000/Manufacturer', text='Atlas')
+            m.get('http://service3:5000/rarity', text='Epic')
+            m.post('http://service4:5000/final', text='60')
+            
+            response =self.client.get(url_for('index'))
+            self.assert200(response)
+            self.assertIn(b'Atlas', response.data)
+            self.assertIn(b'Epic', response.data)
+            self.assertIn(b'60', response.data)

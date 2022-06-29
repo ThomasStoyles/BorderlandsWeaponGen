@@ -3,29 +3,37 @@ from flask import request
 from application import app
 import random as rd 
 
-
-damagetypes = ['Normal','Fire','Electric','Ice','Corrosive','Sluge','Explosive']
-
 @app.route('/final', methods=['POST'])
 def final():
+    overalldamage = 0
     data = request.get_json()
-    Manufacturer = data['Manufacturer']
-    rarity = int(data['rarity'])
-    if rarity <= 30:
-        rareness = "Common"
-    elif rarity <= 55:
-        rareness = "Uncommon"
-    elif rarity <= 75:
-        rareness = "Rare"
-    elif rarity <= 90:
-        rareness = "Epic"
-    elif rarity <= 100:
-        rareness = "Legendary"
-    else:
-        rareness = "Unknown"
+    # manufacturers
+    if data['Manufacturer'] == 'Atlas':
+        overalldamage += 10
+    if data['Manufacturer'] == 'Hyperion':
+        overalldamage += 40      
+    if data['Manufacturer'] == 'Jakobs':
+        overalldamage += 50
+    if data['Manufacturer'] == 'Maliwan':
+        overalldamage += 45
+    if data['Manufacturer'] == 'Anshin':
+        overalldamage += 25
+    if data['Manufacturer'] == 'Vladof':
+        overalldamage += 30
+    # rarity 
+    if data['rarity'] == 'Common':
+        overalldamage += 5
+    if data['rarity'] == 'Uncommon':
+        overalldamage += 15
+    if data['rarity'] == 'Rare':
+        overalldamage += 30
+    if data['rarity'] == 'Epic':
+        overalldamage += 50
+    if data['rarity'] == 'Legendary':
+        overalldamage += 100
+    if data['rarity'] == 'Unknown':
+        overalldamage += 250
+    if data['rarity'] == 'Pearlescent':
+        overalldamage += 150
 
-    damagetype = rd.choice(damagetypes)
-
-    finishedweapon = ('Weapon Type is ' + Manufacturer + '. Weapon rarity is ' + rareness + '. Damage type is ' + damagetype)
-    
-    return str(finishedweapon)
+    return str(overalldamage)

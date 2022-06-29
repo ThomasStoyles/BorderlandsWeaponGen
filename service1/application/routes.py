@@ -6,5 +6,5 @@ import requests
 def index():
     Manufacturers = requests.get('http://service2:5000/Manufacturer').text
     raritys = requests.get('http://service3:5000/rarity').text
-    final = requests.post('http://service4:5000/final',json={'Manufacturer':Manufacturers,'rarity':raritys})
-    return render_template('home.html', Manufacturers = Manufacturers, raritys=raritys, final=final.text)
+    overalldamage = requests.post('http://service4:5000/final',json={'Manufacturer':Manufacturers,'rarity':raritys})
+    return render_template('home.html', Manufacturers = Manufacturers, raritys=raritys, overalldamage=overalldamage.text)

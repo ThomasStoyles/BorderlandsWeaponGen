@@ -94,6 +94,10 @@ Service 3 is the second part of the randomly generated service. This service wil
 
 # Testing
 
+# Docker Swarm
+
+# Ansible
+
 # Known app issues
 
 # Challenges

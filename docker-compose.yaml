@@ -1,27 +1,35 @@
 version: '3.8'
 services:
-  service_1:
-    image: frontpage:v1
+  service1:
+    image: thomass2801/frontpage:v1
     build: ./service1
     container_name: service1
+    deploy:
+      replicas: 1
     networks:
       - example-net
-  service_2:
-    image: random_manufacturer:v1
+  service2:
+    image: thomass2801/random_manufacturer:v1
     build: ./service2
     container_name: service2
+    deploy:
+      replicas: 1
     networks:
       - example-net
-  service_3:
-    image: random_numbers:v1
+  service3:
+    image: thomass2801/random_rarity:v1
     build: ./service3
     container_name: service3
+    deploy:
+      replicas: 1
     networks:
       - example-net
-  service_4:
-    image: alltogether:v1
+  service4:
+    image: thomass2801/overalldamage:v1
     build: ./service4
     container_name: service4
+    deploy:
+      replicas: 1
     networks:
       - example-net
   nginx:
@@ -38,6 +46,6 @@ services:
         published: 80
         protocol: tcp
     depends_on:
-      - service_1
+      - service1
 networks:
   example-net:

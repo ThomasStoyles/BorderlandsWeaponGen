@@ -66,6 +66,30 @@ Here I am close to finishing the project.
 
 # Services
 
+The MVP of the project requires to have multiple services within the application which all work together. Here I will break down these services.
+
+### Service 1
+Service 1
+![alt text]()
+
+
+### Service 2
+Service 2 is going to be our first random service. Within this service we will be setting the gun manufacturers from the game Borderlands. This has been done in a list which can be seen in the screenshot below. 
+
+![alt text]()
+Once the list has been created we used the random package to randomly pick one of these manufacturers and then store that until we need it later in service 4.
+
+
+### Service 3
+Service 3 is the second part of the randomly generated service. This service will be used to give the gun a rarity. This will be done the same way as service 2 by putting all the rarity options in a list and then using the random package. Picking one randomly and storing that until service 4 needs it. This can bee seen in the screenshot below
+![alt text]()
+
+
+### Service 4
+
+![alt text]()
+
+
 # Pipeline
 
 # Testing

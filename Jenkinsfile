@@ -12,7 +12,7 @@ pipeline{
                     sh '''sudo apt install python3 python3-pip python3-venv -y
                     pip3 install pytest pytest-cov
                     pip3 install -r requirements.txt
-                    python3 -m pytest --cov=service1/application
+                    python3 -m pytest --cov=application service1
                     '''
                 }
             }

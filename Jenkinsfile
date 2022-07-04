@@ -13,6 +13,9 @@ pipeline{
                     pip3 install pytest pytest-cov
                     pip3 install -r requirements.txt
                     python3 -m pytest --cov=application service1
+                    python3 -m pytest --cov=application service2
+                    python3 -m pytest --cov=application service3
+                    python3 -m pytest --cov=application service4
                     '''
                 }
             }

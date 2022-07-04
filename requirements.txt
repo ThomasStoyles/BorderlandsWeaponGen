@@ -1,17 +1,17 @@
                
-Flask                  2.1.2               
-Flask-Testing          0.8.1                             
-Jinja2                 3.1.2               
-jsonpatch              1.22                
-jsonpointer            2.0                 
-jsonschema             3.2.0                             
-pip                    20.0.2                             
-pytest                 7.1.2               
-pytest-cov             3.0.0               
-python-apt             2.0.0+ubuntu0.20.4.7
-python-debian          0.1.36ubuntu1                    
-random2                1.0.1               
-requests               2.22.0              
-requests-mock          1.9.3               
-requests-unixsocket    0.2.0                         
-simplejson             3.16.0              
+Flask                              
+Flask-Testing                                     
+Jinja2                             
+jsonpatch                        
+jsonpointer                          
+jsonschema                                      
+pip                                             
+pytest                             
+pytest-cov                       
+python-apt            
+python-debian                        
+random2                            
+requests                        
+requests-mock                    
+requests-unixsocket                        
+simplejson                          

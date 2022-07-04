@@ -1,7 +1,6 @@
-               
 Flask                              
 Flask-Testing                                     
-Jinja2                             
+Jinja2>=3.0                         
 jsonpatch                        
 jsonpointer                          
 jsonschema                                      

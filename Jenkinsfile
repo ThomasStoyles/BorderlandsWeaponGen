@@ -8,7 +8,7 @@ pipeline{
         stages{
             stage('Testing'){
                 steps{
-                    git branch: 'main', url: 'https://github.com/ThomasStoyles/BorderlandsWeaponGen.git'
+                    git branch: 'main', credentialsId: 'd0400d76-2d66-40c4-a808-7ea099c737fc', url: 'git@github.com:ThomasStoyles/BorderlandsWeaponGen.git'
                     sh '''sudo apt install python3 python3-pip python3-venv -y
                     pip3 install pytest pytest-cov
                     pip3 install -r requirements.txt
@@ -19,6 +19,18 @@ pipeline{
                     '''
                 }
             }
+
+            stage('Ansible Docker Deployment'){
+                steps{
+
+                    sh '''scp docker-compose.yaml Thomas@swarm-manager:/home/Thomas/
+                    scp nginx.conf Thomas@swarm-manager:/home/Thomas/
+                    ssh Thomas@swarm-manager docker stack deploy --compose-file docker-compose.yaml deployment-stack
+                    sleep 25
+                    '''
+                }
+            }
+            
             stage('Deploy'){
                 steps{
 

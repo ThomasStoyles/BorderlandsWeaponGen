@@ -11,6 +11,7 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/ThomasStoyles/BorderlandsWeaponGen.git'
                     sh '''sudo apt install python3 python3-pip python3-venv -y
                     pip3 install pytest pytest-cov
+                    python3 -m pytest
                     '''
 
                 }
@@ -20,7 +21,7 @@ pipeline{
 
                     sh '''scp docker-compose.yaml Thomas@swarm-manager:/home/Thomas/
                     scp nginx.conf Thomas@swarm-manager:/home/Thomas/
-                    ssh Thomas@swarm-manager docker stack deploy --compose-file docker compose.yaml deployment-stack
+                    ssh Thomas@swarm-manager docker stack deploy --compose-file docker-compose.yaml deployment-stack
                     sleep 25
                     '''
                 }

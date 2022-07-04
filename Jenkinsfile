@@ -1,8 +1,8 @@
 pipeline{
         agent any
         environment {
-        DOCKER_HUB_CREDS_USR = credentials('dockerhub_id')
-        DOCKER_HUB_CREDS_PSW = credentials('dockerhub_id')
+        DOCKER_HUB_CREDS_USR = credentials('docker-hub-cred')
+        DOCKER_HUB_CREDS_PSW = credentials('docker-hub-cred')
         }
 
         stages{

@@ -11,7 +11,7 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/ThomasStoyles/BorderlandsWeaponGen.git'
                     sh '''sudo apt install python3 python3-pip python3-venv -y
                     pip3 install pytest pytest-cov
-                    pip3 install https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/requirements.txt
+                    pip3 install 'https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/requirements.txt'
                     python3 -m pytest
                     '''
                 }

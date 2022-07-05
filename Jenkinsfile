@@ -20,12 +20,12 @@ pipeline{
                 }
             }
 
-            // stage('Ansible Deployment'){
-            //     steps{
-            //         git branch: 'main', credentialsId: 'd0400d76-2d66-40c4-a808-7ea099c737fc', url: 'git@github.com:ThomasStoyles/BorderlandsWeaponGen.git'
-                    
-            //     }
-            // }
+            stage('Ansible Deployment'){
+                steps{
+                    git branch: 'main', credentialsId: 'd0400d76-2d66-40c4-a808-7ea099c737fc', url: 'git@github.com:ThomasStoyles/BorderlandsWeaponGen.git'
+                    sh 'ssh Thomas@ansible /usr/bin/ansible-playbook -i ansible/inventory.yaml ansible/playbook.yaml'
+                }
+            }
             
             // stage('Docker login and biuld'){
             //     steps{

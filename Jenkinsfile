@@ -20,13 +20,21 @@ pipeline{
                 }
             }
 
-            stage('Ansible Docker Deployment'){
+            stage('Ansible Deployment'){
                 steps{
 
+                    
                 }
             }
             
-            stage('Deploy'){
+            stage('Docker login and biuld'){
+                steps{
+
+                    
+                }
+            }
+
+            stage('Deploy to swarm'){
                 steps{
 
                     sh '''scp docker-compose.yaml Thomas@swarm-manager:/home/Thomas/

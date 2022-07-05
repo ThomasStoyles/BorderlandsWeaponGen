@@ -1,3 +1,0 @@
-
-34.89.118.140 ansible_sudo_pass=password ansible_ssh_user=Thomas
-35.189.111.148 ansible_sudo_pass=password ansible_ssh_user=Thomas

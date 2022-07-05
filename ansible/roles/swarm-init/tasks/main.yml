@@ -1,0 +1,10 @@
+---
+# tasks file for swarm-init
+- name: Init a new swarm with default parameters
+  community.docker.docker_swarm:
+    state: present
+    
+- name: Get info on Docker Swarm
+  community.docker.docker_swarm_info:
+  ignore_errors: yes
+  register: result

@@ -1,0 +1,9 @@
+---
+# tasks file for swarm-join
+- name: Add nodes
+  community.docker.docker_swarm:
+    state: join
+    advertise_addr: swarm-worker
+    join_token: "{{ hostvars['swarm-manager']['result']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: [ 'swarm-manager' ]
+

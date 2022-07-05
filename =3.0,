@@ -1,2 +1,0 @@
-Requirement already satisfied: Jinja2 in /home/Thomas/.local/lib/python3.8/site-packages (3.1.2)
-Requirement already satisfied: MarkupSafe>=2.0 in /home/Thomas/.local/lib/python3.8/site-packages (from Jinja2) (2.1.1)

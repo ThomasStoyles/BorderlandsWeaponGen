@@ -1,8 +1,8 @@
 pipeline{
         agent any
         environment {
-        DOCKER_HUB_CREDS_USR = credentials('docker-hub-cred')
-        DOCKER_HUB_CREDS_PSW = credentials('docker-hub-cred')
+        DOCKER_HUB_CREDS_USR = credentials('docker-hub-usr')
+        DOCKER_HUB_CREDS_PSW = credentials('docker-hub-psw')
         }
 
         stages{
@@ -27,12 +27,13 @@ pipeline{
                 }
             }
             
-            // stage('Docker login and biuld'){
-            //     steps{
-
-                    
-            //     }
-            // }
+            stage('Docker login and biuld conatiners'){
+                steps{
+                    sh '''docker-compose build 
+                        docker login --username $DOCKER_HUB_CREDS_USR --password $DOCKER_HUB_CREDS_PSW
+                        docker-compose push'''
+                }
+            }
 
             stage('Deploy to swarm'){
                 steps{

@@ -20,19 +20,19 @@ pipeline{
                 }
             }
 
-            stage('Ansible Deployment'){
-                steps{
-
+            // stage('Ansible Deployment'){
+            //     steps{
+            //         git branch: 'main', credentialsId: 'd0400d76-2d66-40c4-a808-7ea099c737fc', url: 'git@github.com:ThomasStoyles/BorderlandsWeaponGen.git'
                     
-                }
-            }
+            //     }
+            // }
             
-            stage('Docker login and biuld'){
-                steps{
+            // stage('Docker login and biuld'){
+            //     steps{
 
                     
-                }
-            }
+            //     }
+            // }
 
             stage('Deploy to swarm'){
                 steps{
@@ -53,5 +53,5 @@ pipeline{
                 }
             }
 
-         }
+        }
 }

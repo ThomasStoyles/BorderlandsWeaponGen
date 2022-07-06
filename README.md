@@ -133,6 +133,7 @@ This playbook allowed me to install docker onto my swarm VMs however this wasnt 
 Once this was working I moved onto Jenkins
 
 # Jenkins
+Jenkins is going to be used to automatically 
 
 # CI-CD Pipeline
 

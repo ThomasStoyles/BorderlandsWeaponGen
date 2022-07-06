@@ -71,7 +71,7 @@ Below is a image of my risk assessment.
 The MVP of the project requires to have multiple services within the application which all work together. Here I will break down these services.
 
 ### Service 1
-Service 1
+Service 1 is where everything is going to come together. Here we will call all the services and then put them together to be displayed on the html template that we have created.
 ![alt text]()
 
 
@@ -88,7 +88,7 @@ Service 3 is the second part of the randomly generated service. This service wil
 
 
 ### Service 4
-
+Service 4 is where the two random services, 3 and 4, will be given values which will add up to give one overall value. In my code I havede diffrent manufacturers give an
 ![alt text]()
 
 

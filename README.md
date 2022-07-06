@@ -124,8 +124,13 @@ I also created a nginx.conf this allowed me to add a reverse proxy to the projec
 # Docker swarm and Ansible 
 Once the docker compose was created I created three VMs these being the docker swarm manager, worker and the ansible machine. This was because I was going to use the ansible playbook to deploy docker onto these two VMs. Firstly we made the ssh keys for both swarm machines and added them to each other so the manager public key to the worker and vice-versa. Once completed we started working on the ansible playbook.
 
-The playbook was created to deploy docker on the two VMs that I just created. I the image below you can see this playbook. 
+The playbook was created to deploy docker on the two VMs that I just created. In the image below you can see this playbook. 
+![alt text]()
 
+This playbook allowed me to install docker onto my swarm VMs however this wasnt enough for me therefore I chnaged the workbook so that it works with roles. The roles allowed the workbook to deploy the swarm and add the worker into the swarm. This requires a lot of folders within the roles which was created using docker galaxy. Please see the images below.   
+![alt text]()
+
+Once this was working I moved onto Jenkins
 
 # Jenkins
 

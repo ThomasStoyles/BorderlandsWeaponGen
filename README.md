@@ -92,9 +92,26 @@ Service 4 is where the two random services, 3 and 4, will be given values which 
 ![alt text]()
 
 
-# Pipeline
-
 # Testing
+
+With the testing I used pytest to test all the lines of code was being used and are fully working. Below are some screenshots with breif comments on what the tests are doing and achieving.
+
+Service 1
+![alt text]()
+Here you can see see the tests for service one. Within this test you can see that we are trying to create a gun so we set the services to our own answers so here we have Jakobs, Uncommon and 65, as 65 is the total for the combination of the two other values. We then check if the client is able to get them three answers from the three mock services, which we have set up.
+
+Service 2
+![alt text]()
+In service 2 we are just checking that the test is able to get a random value from the list manufacturer. Here we asked it to get the value Jakobs.
+
+Service 3
+![alt text]()
+
+
+Service 4
+![alt text]()
+
+
 
 # Docker Swarm
 

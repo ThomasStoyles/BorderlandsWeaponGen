@@ -112,11 +112,20 @@ Service 4
 ![alt text]()
 Service 4 tests multiple things. Firstly it tests if the values that are being added up are correct so for example, Atlas and Common have a overall damage of 15 so we test that this is given back to the service 4. We allow test if the client is able to get the random values from service2 and 3 by using the self.client.post along with the json={}.
 
-# Docker and Docker Swarm
-When I started Docker I knew that Iwas going to have to incorprate ansible into 
+# Docker compose
 
+When I started Docker I knew that I was going to have to incorporate ansible into my docker as well, as I was using ansible to install docker onto my swarm manager and worker. Before I could do that I needed a docker compose. So firstly I created my docker-compose.yaml file as you can see here.  
+![alt text]()
+The docker compose will allow me to create my 5 services in images and puts them into containers which will get sent to my docker hub. This allows me to pull the containers to my docker swarm manager and deploy them and the replicas to my swarm. So why do i need to deploy these to multiple other vms. The reason is so that the VM doesnt get overloaded as one vm might not be able to load all the continers and their replicas without crashing.
 
-# Ansible
+I also created a nginx.conf this allowed me to add a reverse proxy to the project as seen in the image below
+![alt text]()
+
+# Docker swarm and Ansible 
+Once the docker compose was created I created three VMs these being the docker swarm manager, worker and the ansible machine. This was because I was going to use the ansible playbook to deploy docker onto these two VMs. Firstly we made the ssh keys for both swarm machines and added them to each other so the manager public key to the worker and vice-versa. Once completed we started working on the ansible playbook.
+
+The playbook was created to deploy docker on the two VMs that I just created. I the image below you can see this playbook. 
+
 
 # Jenkins
 

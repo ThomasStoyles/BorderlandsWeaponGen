@@ -133,7 +133,7 @@ This playbook allowed me to install docker onto my swarm VMs however this wasnt 
 Once this was working I moved onto Jenkins
 
 # Jenkins
-Jenkins is going to be used to automatically 
+Jenkins is going to be used to automatically to deploy everything that we have created above. This is done by using a jenkins file which is on the development VM, I also added a webhook so that when you push something to github jenkins automatically runs the jenkins file. Within the jenkins
 
 # CI-CD Pipeline
 

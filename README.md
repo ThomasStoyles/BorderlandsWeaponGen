@@ -106,14 +106,15 @@ In service 2 we are just checking that the test is able to get a random value fr
 
 Service 3
 ![alt text]()
-Here is very similar to service 2, we take a random value from the rarity here we asked it 
+Here is very similar to service 2, we take a random value from the rarity here we asked it for Uncommon.
 
 Service 4
 ![alt text]()
-
-
+Service 4 tests multiple things. Firstly it tests if the values that are being added up are correct so for example, Atlas and Common have a overall damage of 15 so we test that this is given back to the service 4. We allow test if the client is able to get the random values from service2 and 3 by using the self.client.post along with the json={}.
 
 # Docker Swarm
+When we started 
+
 
 # Ansible
 

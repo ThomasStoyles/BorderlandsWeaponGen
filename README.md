@@ -113,10 +113,12 @@ Service 4
 Service 4 tests multiple things. Firstly it tests if the values that are being added up are correct so for example, Atlas and Common have a overall damage of 15 so we test that this is given back to the service 4. We allow test if the client is able to get the random values from service2 and 3 by using the self.client.post along with the json={}.
 
 # Docker and Docker Swarm
-When we started 
+When I started Docker I knew that Iwas going to have to incorprate ansible into 
 
 
 # Ansible
+
+# Jenkins
 
 # CI-CD Pipeline
 

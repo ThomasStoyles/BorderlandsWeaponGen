@@ -49,7 +49,7 @@ Service 3 - This will be the second randomized value. For my project this will b
 
 Service 4 - This service will be where everything comes together and will be sent back to service 1. In here we will have the numbers from service 3 be defined into groups so this number represents this rarity. In here we will also have a list of damage types which can be put on each weapon. 
 
-Service 5 - nginx proxy container, only shows app on port 80
+Service 5 - The last service will be an nginx proxy container. This will allow me to make it so the app only shows up on port 80.
 
 # Planning 
 
@@ -62,7 +62,7 @@ Here I am close to finishing the project.
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Trello2.jpg)
 
 ### Risk assessment
-
+Below is a image of my risk assessment.
 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Risk.jpg)
 

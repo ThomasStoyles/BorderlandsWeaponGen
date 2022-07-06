@@ -133,7 +133,15 @@ This playbook allowed me to install docker onto my swarm VMs however this wasnt 
 Once this was working I moved onto Jenkins
 
 # Jenkins
-Jenkins is going to be used to automatically to deploy everything that we have created above. This is done by using a jenkins file which is on the development VM, I also added a webhook so that when you push something to github jenkins automatically runs the jenkins file. Within the jenkins
+Jenkins is going to be used to automatically to deploy everything that we have created above. This is done by using a jenkins file which is on the development VM, I also added a webhook so that when you push something to github jenkins automatically runs the jenkins file. Within the jenkins file we have mulitple stages within the pipeline these are...
+
+* Testing - Testing the pytest within the application
+* Ansible Deployment - Automatically runs the ansible playbook and does everything within it
+* Docker hub login, Container biuld - Here we will log into docker hub and biuld the new containers 
+* Swarm deployment - Here we deploy the swarm 
+* Curl - This isnt needed however I have it to see that the biuld has been fully successful.
+
+Once all this has been complete 
 
 # CI-CD Pipeline
 

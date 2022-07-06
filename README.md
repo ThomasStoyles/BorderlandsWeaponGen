@@ -141,7 +141,9 @@ Jenkins is going to be used to automatically to deploy everything that we have c
 * Swarm deployment - Here we deploy the swarm 
 * Curl - This isnt needed however I have it to see that the biuld has been fully successful.
 
-Once all this has been complete 
+Once all this has been complete the project will be deployed onto the swarm and will be able to be accessed from the swarm ip
+
+Here are some images of the jenkins pipeline in use with comments.
 
 # CI-CD Pipeline
 

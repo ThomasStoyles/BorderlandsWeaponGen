@@ -106,7 +106,7 @@ In service 2 we are just checking that the test is able to get a random value fr
 
 Service 3
 ![alt text]()
-
+Here is very similar to service 2, we take a random value from the rarity here we asked it 
 
 Service 4
 ![alt text]()

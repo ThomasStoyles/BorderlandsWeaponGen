@@ -191,16 +191,33 @@ Jenkins is going to be used to automatically to deploy everything that we have c
 Once all this has been complete the project will be deployed onto the swarm and will be able to be accessed from the swarm ip
 
 Here are some images of the jenkins pipeline terminal in which each stage has been complete, with comments.
+* Here jenkins is running our pytests for the application
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/jenkins_testing.jpg)
 
-![alt text]()
-![alt text]()
-![alt text]()
-![alt text]()
-![alt text]()
+
+* Jenkins the runs the ansible playbook
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/jenkins_playbook.jpg)
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/jenkins_playbook1.jpg)
+
+
+* Here we have the docker compose being ran and pushed to docker hub
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/jenkins_docker_compose.jpg)
+
+* Next we have the swarm being deployed with the new images plus a 25 second sleep so they have time to deploy
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Sleep.jpg)
+
+* Lastly we have the curl to show the application is running 
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/curl.jpg)
+
+
+Here we have a screenshot of the finished pipeline
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/jenkins_pipeline.jpg)
+
 
 # CI-CD Pipeline
+To help understand how the project works and the tools I used when creating it please see this CI-CD Pipeline I created.
 
-
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/CI-CD.jpg)
 
 # Known app issues
 There is only one issue within the application.

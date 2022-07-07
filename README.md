@@ -162,20 +162,19 @@ We then went on to both VMs to see if docker had been installed.
 
 As you can see docker was installed on both vms however, this wasnt enough for me therefore I changed the workbook so that it works with roles. The roles allowed the workbook to deploy the swarm and add the worker into the swarm. This requires a lot of folders within the roles which was created using docker galaxy. Please see the images below.   
 
-![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_playbook.jpg)
 * Here you can see the playbook which has been improved
 
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_playbook.jpg)
 
 
-
-![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_inv.jpg)
 * Here is the improved inventory 
 
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_inv.jpg)
 
 
+* Here you can see all the roles and files created by docker galaxy and one of the three files i had to change
 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/roles.jpg)
-* Here you can see all the roles and files created by docker galaxy and one of the three files i had to change
 
 
 Once this was working I moved onto Jenkins

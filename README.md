@@ -157,16 +157,25 @@ Here are some images of the jenkins pipeline terminal in which each stage has be
 
 # Known app issues
 There is only one issue within the application.
+
 * HTML layout needs to be changed 
 
 # Challenges
 
+When creating this project I ran into many challenges which I had to overcome the first challenge was json. When I was creating my python application I originally set myself a task which was above my abilities. Therefore once I had comepleted the application it was impossible to test the application because i had not implemented json correctly. I was not calling json at all the services therefore, I had to change my application to a more simple version and then correctly implemented json so that my service 1 was receiving the data correctly.
+
+The last issue I came across was with the swarm set up. When trying to initialize the swarm I had already created a manager swarm which was on my development VM rather than the swarm manager VM. Therefore I was unable to add my swarm worker to the correct VM, as it was part of the development VM swarm. To change to this I had to remove the development swarm and then add it using the join token this allowed me to put these two vms together in a swarm. 
+
+
 # Future updates
+The application can be improved and therefore we will have future updates.
+
 * Adding an nginx balance loader so its not as secure as it could be
 * Adding an SQL database for store the values generated which will allow for more features
 * More complex randomizers 
 
 # Conclusion
+In conclusion I feel like this project has pushed me into areas that I am new too and, has allowed me to explore areas of DevOps that I wasn't comfortable with. This has made me more confident in my ability in Jenkins and Python while, learning new skills such as Ansible and Docker. This project is not perfect but with more experience I will be able to come back to this project and improve it.
 
 # Contributors
 Thomas Stoyles

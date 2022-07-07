@@ -53,7 +53,7 @@ Service 5 - The last service will be an nginx proxy container. This will allow m
 
 ## My Application
 Next lets look at how my application will work following this architecture.
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/User%20diagram.jpg)
 
 * The user will interact with the front-end html page 
 * The service will then go to the nginx service/service 5, where it will activate the reverse proxy and listen on port 80

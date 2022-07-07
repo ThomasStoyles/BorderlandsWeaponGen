@@ -149,9 +149,15 @@ Here are some images of the jenkins pipeline in use with comments.
 
 # Known app issues
 
+There is only one issue within the application.
+* HTML layout needs to be changed 
+
 # Challenges
 
 # Future updates
+* Adding an nginx balance loader so its not as secure as it could be
+* Adding an SQL database for store the values generated which will allow for more features
+* More complex randomizers 
 
 # Conclusion
 

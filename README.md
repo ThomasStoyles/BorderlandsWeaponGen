@@ -51,6 +51,15 @@ Service 4 - This service will be where everything comes together and will be sen
 
 Service 5 - The last service will be an nginx proxy container. This will allow me to make it so the app only shows up on port 80.
 
+## My Application
+Next lets look at how my application will work following this architecture.
+![alt text]()
+
+* The user will interact with the front-end html page 
+* The service will then go to the nginx service/service 5, where it will activate the reverse proxy and listen on port 80
+* The front-end/service1 will then got to service 2, service 3 and service 4 and retrive all the data using json
+* Then front-end/service1 will then display the new randomized gun to the user by going ther the nginx service (service 5)
+
 # Planning 
 
 ### Kanban Board
@@ -159,6 +168,7 @@ Here are some images of the jenkins pipeline terminal in which each stage has be
 There is only one issue within the application.
 
 * HTML layout needs to be changed 
+* Add a generate button as the one that was implemented doesn't work and was removed
 
 # Challenges
 

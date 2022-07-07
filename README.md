@@ -143,12 +143,19 @@ Jenkins is going to be used to automatically to deploy everything that we have c
 
 Once all this has been complete the project will be deployed onto the swarm and will be able to be accessed from the swarm ip
 
-Here are some images of the jenkins pipeline in use with comments.
+Here are some images of the jenkins pipeline terminal in which each stage has been complete, with comments.
+
+![alt text]()
+![alt text]()
+![alt text]()
+![alt text]()
+![alt text]()
 
 # CI-CD Pipeline
 
-# Known app issues
 
+
+# Known app issues
 There is only one issue within the application.
 * HTML layout needs to be changed 
 

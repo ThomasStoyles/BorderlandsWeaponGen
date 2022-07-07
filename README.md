@@ -201,10 +201,15 @@ Here are some images of the jenkins pipeline terminal in which each stage has be
 
 
 * Here we have the docker compose being ran and pushed to docker hub
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/jenkins_docker_compose.jpg)
+
+
+
 
 * Next we have the swarm being deployed with the new images plus a 25 second sleep so they have time to deploy
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Sleep.jpg)
+
 
 * Lastly we have the curl to show the application is running 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/curl.jpg)

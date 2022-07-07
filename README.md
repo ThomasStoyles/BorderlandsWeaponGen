@@ -106,19 +106,27 @@ Service 4 is where the two random services, 3 and 4, will be given values which 
 With the testing I used pytest to test all the lines of code was being used and are fully working. Below are some screenshots with breif comments on what the tests are doing and achieving.
 
 Service 1
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service1_tests.jpg)
+
 Here you can see see the tests for service one. Within this test you can see that we are trying to create a gun so we set the services to our own answers so here we have Jakobs, Uncommon and 65, as 65 is the total for the combination of the two other values. We then check if the client is able to get them three answers from the three mock services, which we have set up.
 
 Service 2
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service2.jpg)
+
 In service 2 we are just checking that the test is able to get a random value from the list manufacturer. Here we asked it to get the value Jakobs.
 
 Service 3
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service3_tests.jpg)
+
 Here is very similar to service 2, we take a random value from the rarity here we asked it for Uncommon.
 
 Service 4
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service4_tests.jpg)
+
 Service 4 tests multiple things. Firstly it tests if the values that are being added up are correct so for example, Atlas and Common have a overall damage of 15 so we test that this is given back to the service 4. We allow test if the client is able to get the random values from service2 and 3 by using the self.client.post along with the json={}.
 
 # Docker compose
@@ -158,9 +166,14 @@ As you can see docker was installed on both vms however, this wasnt enough for m
 * Here you can see the playbook which has been improved
 
 
+
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_inv.jpg)
 * Here is the improved inventory 
-<br>
+
+
+
+
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/roles.jpg)
 * Here you can see all the roles and files created by docker galaxy and one of the three files i had to change
 

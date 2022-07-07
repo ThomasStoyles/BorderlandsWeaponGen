@@ -124,20 +124,46 @@ Service 4 tests multiple things. Firstly it tests if the values that are being a
 # Docker compose
 
 When I started Docker I knew that I was going to have to incorporate ansible into my docker as well, as I was using ansible to install docker onto my swarm manager and worker. Before I could do that I needed a docker compose. So firstly I created my docker-compose.yaml file as you can see here.  
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/docker_compose.jpg)
+
 The docker compose will allow me to create my 5 services in images and puts them into containers which will get sent to my docker hub. This allows me to pull the containers to my docker swarm manager and deploy them and the replicas to my swarm. So why do i need to deploy these to multiple other vms. The reason is so that the VM doesnt get overloaded as one vm might not be able to load all the continers and their replicas without crashing.
 
 I also created a nginx.conf this allowed me to add a reverse proxy to the project as seen in the image below
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/nginx.jpg)
 
 # Docker swarm and Ansible 
 Once the docker compose was created I created three VMs these being the docker swarm manager, worker and the ansible machine. This was because I was going to use the ansible playbook to deploy docker onto these two VMs. Firstly we made the ssh keys for both swarm machines and added them to each other so the manager public key to the worker and vice-versa. Once completed we started working on the ansible playbook.
 
 The playbook was created to deploy docker on the two VMs that I just created. In the image below you can see this playbook. 
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/docker_install_1.jpg)
 
-This playbook allowed me to install docker onto my swarm VMs however this wasnt enough for me therefore I chnaged the workbook so that it works with roles. The roles allowed the workbook to deploy the swarm and add the worker into the swarm. This requires a lot of folders within the roles which was created using docker galaxy. Please see the images below.   
-![alt text]()
+Once this was done I tested that the ping worked so that the ansible VM could connect to the swarm manager and worker. See image below for proof
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/Pingtest.jpg)
+
+
+When the ping was successful I tested the playbook installed docker onto both VMs. Firstly we ran the playbook to see if it works. See image below 
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/first_ansible_playbook.jpg)
+As you can clearly see the playbook ran successfully and changes was made to the VMs.
+
+We then went on to both VMs to see if docker had been installed.
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/swarm_manager_ansible_proof.jpg)
+* Swarm Manager VM
+
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/swarm_worker_ansible_proof.jpg)
+* Swarm worker VM
+
+As you can see docker was installed on both vms however, this wasnt enough for me therefore I changed the workbook so that it works with roles. The roles allowed the workbook to deploy the swarm and add the worker into the swarm. This requires a lot of folders within the roles which was created using docker galaxy. Please see the images below.   
+
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_playbook.jpg)
+* Here you can see the playbook which has been improved
+
+
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/improved_inv.jpg)
+* Here is the improved inventory 
+<br>
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/roles.jpg)
+* Here you can see all the roles and files created by docker galaxy and one of the three files i had to change
+
 
 Once this was working I moved onto Jenkins
 

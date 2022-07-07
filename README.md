@@ -81,24 +81,24 @@ The MVP of the project requires to have multiple services within the application
 
 ### Service 1
 Service 1 is where everything is going to come together. Here we will call all the services and then put them together to be displayed on the html template that we have created.
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service1.jpg)
 
 
 ### Service 2
 Service 2 is going to be our first random service. Within this service we will be setting the gun manufacturers from the game Borderlands. This has been done in a list which can be seen in the screenshot below. 
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service2.jpg)
 
-![alt text]()
 Once the list has been created we used the random package to randomly pick one of these manufacturers and then store that until we need it later in service 4.
 
 
 ### Service 3
 Service 3 is the second part of the randomly generated service. This service will be used to give the gun a rarity. This will be done the same way as service 2 by putting all the rarity options in a list and then using the random package. Picking one randomly and storing that until service 4 needs it. This can bee seen in the screenshot below.
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service3.jpg)
 
 
 ### Service 4
 Service 4 is where the two random services, 3 and 4, will be given values which will add up to give one overall value. In my code I have made diffrent manufacturers which will have diffrent values, these values will add up to the overall damage of the gun you are creating. The other feature will be the rarity of the gun which will also add to the overall damage of the gun. This has been achieved by using if statements to say if the manufacturer is this then add this amount. Please see the image below to show this.
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service4.jpg)
 
 
 # Testing
@@ -106,19 +106,19 @@ Service 4 is where the two random services, 3 and 4, will be given values which 
 With the testing I used pytest to test all the lines of code was being used and are fully working. Below are some screenshots with breif comments on what the tests are doing and achieving.
 
 Service 1
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service1_tests.jpg)
 Here you can see see the tests for service one. Within this test you can see that we are trying to create a gun so we set the services to our own answers so here we have Jakobs, Uncommon and 65, as 65 is the total for the combination of the two other values. We then check if the client is able to get them three answers from the three mock services, which we have set up.
 
 Service 2
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service2.jpg)
 In service 2 we are just checking that the test is able to get a random value from the list manufacturer. Here we asked it to get the value Jakobs.
 
 Service 3
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service3_tests.jpg)
 Here is very similar to service 2, we take a random value from the rarity here we asked it for Uncommon.
 
 Service 4
-![alt text]()
+![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service4_tests.jpg)
 Service 4 tests multiple things. Firstly it tests if the values that are being added up are correct so for example, Atlas and Common have a overall damage of 15 so we test that this is given back to the service 4. We allow test if the client is able to get the random values from service2 and 3 by using the self.client.post along with the json={}.
 
 # Docker compose

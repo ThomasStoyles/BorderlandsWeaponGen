@@ -39,15 +39,15 @@ These requirements are as followed...
 Once all these requirements have been met the project will be complete.
 
 # Architecture
-The architecture for this project will be as followed...
+The architecture for this project will be a 5 service architecture as seen below.
 
 Service 1 - This service will be the frontend of the application. This will be what the user sees and will be very basic.
 
 Service 2 - This will be the first randomized value. For my project this will be types of manufacturers that can be drawn at random. 
 
-Service 3 - This will be the second randomized value. For my project this will be a number between 0-105 which will then correlate to the rarity of the weapon which will be defined in service 4.
+Service 3 - This will be the second randomized value. For my project this will be a rarity picked from a list.
 
-Service 4 - This service will be where everything comes together and will be sent back to service 1. In here we will have the numbers from service 3 be defined into groups so this number represents this rarity. In here we will also have a list of damage types which can be put on each weapon. 
+Service 4 - This service will be defining what numbers to give to each options. This will then add up to a overall damage number.
 
 Service 5 - The last service will be an nginx proxy container. This will allow me to make it so the app only shows up on port 80.
 
@@ -105,25 +105,25 @@ Service 4 is where the two random services, 3 and 4, will be given values which 
 
 With the testing I used pytest to test all the lines of code was being used and are fully working. Below are some screenshots with breif comments on what the tests are doing and achieving.
 
-Service 1
+## Service 1
 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service1_tests.jpg)
 
-Here you can see see the tests for service one. Within this test you can see that we are trying to create a gun so we set the services to our own answers so here we have Jakobs, Uncommon and 65, as 65 is the total for the combination of the two other values. We then check if the client is able to get them three answers from the three mock services, which we have set up.
+I then check if the client is able to get the three answers from my three mock services, which I have set up.
 
-Service 2
+## Service 2
 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service2.jpg)
 
 In service 2 we are just checking that the test is able to get a random value from the list manufacturer. Here we asked it to get the value Jakobs.
 
-Service 3
+## Service 3
 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service3_tests.jpg)
 
 Here is very similar to service 2, we take a random value from the rarity here we asked it for Uncommon.
 
-Service 4
+## Service 4
 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/service4_tests.jpg)
 
@@ -131,16 +131,16 @@ Service 4 tests multiple things. Firstly it tests if the values that are being a
 
 # Docker compose
 
-When I started Docker I knew that I was going to have to incorporate ansible into my docker as well, as I was using ansible to install docker onto my swarm manager and worker. Before I could do that I needed a docker compose. So firstly I created my docker-compose.yaml file as you can see here.  
+When I started Docker I knew that I was going to have to incorporate ansible into my docker as well, as I was using ansible to install docker onto my swarm manager and worker. I created a docker-compose.yaml file ready for my swarm manager to deploy once ansible has completed all the set up.
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/docker_compose.jpg)
 
-The docker compose will allow me to create my 5 services in images and puts them into containers which will get sent to my docker hub. This allows me to pull the containers to my docker swarm manager and deploy them and the replicas to my swarm. So why do i need to deploy these to multiple other vms. The reason is so that the VM doesnt get overloaded as one vm might not be able to load all the continers and their replicas without crashing.
+The docker compose will allow me to create my 5 services in images which will get sent to my docker hub. This allows me to pull the containers to my docker swarm manager and deploy them and the replicas to my swarm. So why do I need to deploy these to multiple other VM's. The reason is so that the VM doesn't get overloaded as one VM might not be able to load all the containers and their replicas without crashing.
 
 I also created a nginx.conf this allowed me to add a reverse proxy to the project as seen in the image below
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/nginx.jpg)
 
 # Docker swarm and Ansible 
-Once the docker compose was created I created three VMs these being the docker swarm manager, worker and the ansible machine. This was because I was going to use the ansible playbook to deploy docker onto these two VMs. Firstly we made the ssh keys for both swarm machines and added them to each other so the manager public key to the worker and vice-versa. Once completed we started working on the ansible playbook.
+Once the docker compose was created I created three VMs these being the docker swarm manager, worker and the ansible machine. This was because I was going to use the ansible playbook to deploy docker onto these two VMs. Firstly we made sure that the ssh key for the ansible VM is in both swarm machines, so that ansible could connect succesfully. Once completed we started working on the ansible playbook.
 
 The playbook was created to deploy docker on the two VMs that I just created. In the image below you can see this playbook. 
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/docker_install_1.jpg)
@@ -160,7 +160,8 @@ We then went on to both VMs to see if docker had been installed.
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/swarm_worker_ansible_proof.jpg)
 * Swarm worker VM
 
-As you can see docker was installed on both vms however, this wasnt enough for me therefore I changed the workbook so that it works with roles. The roles allowed the workbook to deploy the swarm and add the worker into the swarm. This requires a lot of folders within the roles which was created using docker galaxy. Please see the images below.   
+As you can see docker was installed on both VM's however, this wasn't enough for me therefore I changed the workbook so that it works with roles. The roles allowed the workbook to deploy the swarm and add the worker into the swarm. I organised these tasks into roles which was created using docker galaxy. Please see the images below.
+
 
 * Here you can see the playbook which has been improved
 
@@ -180,15 +181,15 @@ As you can see docker was installed on both vms however, this wasnt enough for m
 Once this was working I moved onto Jenkins
 
 # Jenkins
-Jenkins is going to be used to automatically to deploy everything that we have created above. This is done by using a jenkins file which is on the development VM, I also added a webhook so that when you push something to github jenkins automatically runs the jenkins file. Within the jenkins file we have mulitple stages within the pipeline these are...
+Jenkins is going to be used to automatically to deploy everything that we have created above. This is done by using a jenkins file which is on the development VM, I also added a webhook so that when you push something to github jenkins automatically runs the jenkins file. Within the jenkins file we have mulitple stages within the pipeline, as seen below.
 
-* Testing - Testing the pytest within the application
+* Testing - testing was using using pytest.
 * Ansible Deployment - Automatically runs the ansible playbook and does everything within it
-* Docker hub login, Container biuld - Here we will log into docker hub and biuld the new containers 
+* Docker hub login, Container build - Here we will log into docker hub and build the new containers 
 * Swarm deployment - Here we deploy the swarm 
-* Curl - This isnt needed however I have it to see that the biuld has been fully successful.
+* Curl - This isn't needed however I have it to see that the build has been fully successful.
 
-Once all this has been complete the project will be deployed onto the swarm and will be able to be accessed from the swarm ip
+Once all this has been complete the app will be deployed onto the swarm. This can then be accessed via the IP of either the swarm-manager or swarm-worker.
 
 Here are some images of the jenkins pipeline terminal in which each stage has been complete, with comments.
 * Here jenkins is running our pytests for the application
@@ -238,14 +239,14 @@ The last issue I came across was with the swarm set up. When trying to initializ
 
 
 # Future updates
-The application can be improved and therefore we will have future updates.
+The application can be improved with future updates, some of my current ideas are as follows:
 
-* Adding an nginx balance loader so its not as secure as it could be
-* Adding an SQL database for store the values generated which will allow for more features
-* More complex randomizers 
+* Add an nginx balance loader to increase security
+* Add an SQL database for store the values generated which will allow for more features
+* More complex randomizers
 
 # Conclusion
-In conclusion I feel like this project has pushed me into areas that I am new too and, has allowed me to explore areas of DevOps that I wasn't comfortable with. This has made me more confident in my ability in Jenkins and Python while, learning new skills such as Ansible and Docker. This project is not perfect but with more experience I will be able to come back to this project and improve it.
+In conclusion I feel like this project has pushed me into areas that I am new to and, has allowed me to explore areas of DevOps that I wasn't comfortable with. This has made me more confident in my ability in Jenkins and Python while, learning new skills such as Ansible and Docker. This project is not perfect but with more experience I will be able to come back to this project and improve it.
 
 # Contributors
 Thomas Stoyles

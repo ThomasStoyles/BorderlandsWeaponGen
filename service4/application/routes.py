@@ -8,8 +8,7 @@ def final():
     overalldamage = 0
     data = request.get_json()
     # manufacturers
-    if data['Manufacturer'] == 'Atlas':
-        overalldamage += 10
+C
     if data['Manufacturer'] == 'Hyperion':
         overalldamage += 40      
     if data['Manufacturer'] == 'Jakobs':
@@ -20,6 +19,12 @@ def final():
         overalldamage += 25
     if data['Manufacturer'] == 'Vladof':
         overalldamage += 30
+    if data['Manufacturer'] == 'C':
+        overalldamage += 100   
+    if data['Manufacturer'] == 'dsafafa':
+        overalldamage += 140
+    if data['Manufacturer'] == 'qwerqwerqw':
+        overalldamage += 160
     # rarity 
     if data['rarity'] == 'Common':
         overalldamage += 5

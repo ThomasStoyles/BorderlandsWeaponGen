@@ -8,7 +8,7 @@ def final():
     overalldamage = 0
     data = request.get_json()
     # manufacturers
-C
+
     if data['Manufacturer'] == 'Hyperion':
         overalldamage += 40      
     if data['Manufacturer'] == 'Jakobs':

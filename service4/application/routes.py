@@ -20,6 +20,12 @@ def final():
         overalldamage += 25
     if data['Manufacturer'] == 'Vladof':
         overalldamage += 30
+    if data['Manufacturer'] == 'a':
+        overalldamage += 430
+    if data['Manufacturer'] == 'b':
+        overalldamage += 330
+    if data['Manufacturer'] == 'c':
+        overalldamage += 230
     # rarity 
     if data['rarity'] == 'Common':
         overalldamage += 5

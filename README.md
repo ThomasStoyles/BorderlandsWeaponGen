@@ -2,6 +2,34 @@
 
 ### Table of contents
 
+[Introduction](#Introduction)
+
+[MVP](#MVP)
+
+[Architecture](#Architecture)
+
+[Planning](#Planning)
+
+[Services](#Services)
+
+[Docker-compose](#Docker-compose)
+
+[Jenkins](#Jenkins)
+
+[CI-CD Pipeline](#CI-CD_Pipeline)
+
+[Known app issues](#Known_app_issues )
+
+[Challenges](#Challenges)
+
+[Future updates](#Future_updates)
+
+[Conclusion](#Conclusion)
+
+[Contributors](#Contributors)
+
+[Acknowledgements](#Acknowledgements)
+
 # Introduction 
 This project which has been set out by QA is to create an application that genetayes objects. THese will be set upon predefined rules. In this project thes objects will create a random gun from the game Borderlands. This will give you a manufacturer, gun rarity and elemental damage. These objects will be randomized however will be defined in some way.  
 
@@ -129,7 +157,7 @@ Here is very similar to service 2, we take a random value from the rarity here w
 
 Service 4 tests multiple things. Firstly it tests if the values that are being added up are correct so for example, Atlas and Common have a overall damage of 15 so we test that this is given back to the service 4. We allow test if the client is able to get the random values from service2 and 3 by using the self.client.post along with the json={}.
 
-# Docker compose
+# Docker-compose
 
 When I started Docker I knew that I was going to have to incorporate ansible into my docker as well, as I was using ansible to install docker onto my swarm manager and worker. I created a docker-compose.yaml file ready for my swarm manager to deploy once ansible has completed all the set up.
 ![alt text](https://github.com/ThomasStoyles/BorderlandsWeaponGen/blob/main/Photos%20and%20Screenshots/docker_compose.jpg)
@@ -230,6 +258,7 @@ There is only one issue within the application.
 
 * HTML layout needs to be changed 
 * Add a generate button as the one that was implemented doesn't work and was removed
+* Table of content is not working 
 
 # Challenges
 
